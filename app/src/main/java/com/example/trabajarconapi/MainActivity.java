@@ -2,6 +2,9 @@ package com.example.trabajarconapi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,6 +31,7 @@ import org.json.JSONObject;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
@@ -82,8 +86,17 @@ public class MainActivity extends AppCompatActivity {
                 Evaluador e = adapterEvaluador.getItem(position);
                 TextView selecionado = (TextView) findViewById(R.id.txtSelecionado);
                 selecionado.setText(e.getNombres());
+
+                // preparando los datos para enviar al otro activity
+                Intent itent = new Intent(MainActivity.this, EvaludorActivity.class);
+
+                itent.putExtra("evaluador", e);
+
+                startActivity(itent);
+
             }
         });
+
 
         loadEvaluadores();
 
@@ -115,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
                                         evaluador.getString("imgjpg"),
                                         evaluador.getString("nombres")
                                 );
+
                                 adapterEvaluador.add(eva);
                                 //textInfo.append(evaluador.getString("nombres")+"\n");
 

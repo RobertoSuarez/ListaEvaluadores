@@ -1,12 +1,17 @@
 package com.example.trabajarconapi;
 
-public class Evaluador {
+import android.graphics.Bitmap;
+
+import java.io.Serializable;
+
+public class Evaluador implements Serializable {
 
     private String idevaluador;
     private String area;
     private String imgJPG;
     private String imgjpg;
     private String nombres;
+    private Bitmap imagen;
 
     public Evaluador(String idevaluador, String area, String imgJPG, String imgjpg, String nombres) {
         this.idevaluador = idevaluador;
@@ -54,5 +59,13 @@ public class Evaluador {
 
     public void setNombres(String nombres) {
         this.nombres = nombres;
+    }
+
+    public Bitmap getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(Bitmap imagen) {
+        this.imagen = imagen;
     }
 }

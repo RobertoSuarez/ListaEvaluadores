@@ -8,16 +8,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_margin="5dp">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageViewAvatar"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
             tools:srcCompat="@drawable/avatar"
             tools:visibility="visible" />
 
@@ -26,8 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtID"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_toEndOf="@+id/textView"
             android:text="nombre" />
 
@@ -36,38 +36,41 @@
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView3"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/imageView"
-            android:text="Nombres:" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/imageViewAvatar"
+            android:text="Nombres:"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/imageView"
-            android:text="ID:" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/imageViewAvatar"
+            android:text="ID:"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/imageView"
-            android:text="Area:" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/imageViewAvatar"
+            android:text="Area:"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_toEndOf="@+id/textView3"
             android:text="TextView" />
 
@@ -76,8 +79,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/itemNombre"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_toEndOf="@+id/textView4"
             android:text="TextView" />
 
